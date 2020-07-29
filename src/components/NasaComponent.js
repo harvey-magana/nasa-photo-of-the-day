@@ -1,5 +1,5 @@
 import React, {useEffect, useState } from "react";
-//import NasaContent from "./components/NasaContent"
+import Nasa from "./components/Nasa"
 import axios from "axios";
 
 export default function NasaComponent () {
@@ -19,7 +19,7 @@ export default function NasaComponent () {
 
     return (
         <div>
-            {things.map(thing => <NasaContent key={thing.id} thing={thing} />)}
+            {things.map(thing => <Nasa key={thing.id} thing={thing} />)}
         </div>
     )
 }
