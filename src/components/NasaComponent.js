@@ -10,7 +10,7 @@ export default function NasaComponent () {
     useEffect( () => {
         axios.get("https://api.nasa.gov/planetary/apod?date=2020-07-28&api_key=JUeUMwskOxYmIzMB0ia5qheFd3nrwbTuqN1TBlLA")
             .then( response => {
-                console.log(response)
+
                 setThings(response.data)
             })
             .catch( error => console.log(error))
@@ -18,12 +18,7 @@ export default function NasaComponent () {
 
     return (
         <div>
-            {console.log(Object.entries(things))}
-            {Object.entries(things).map( (thing, i) => { 
-                return (
-                <Nasa key={i} nasa={things} />
-                )
-            })}
+            <Nasa nasa={things} />
         </div>
     )
 }
