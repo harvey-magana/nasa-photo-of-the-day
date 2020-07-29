@@ -7,6 +7,10 @@ const Nasa = props => {
     return ( 
         <div>
             <h1>{nasa.title}</h1>
+            <p>{nasa.date}</p>
+            <img src={nasa.url}/>
+            <p>{nasa.copyright}</p>
+            <p>{nasa.explanation}</p>
         </div>
     )
 }
