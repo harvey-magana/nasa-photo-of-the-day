@@ -1,12 +1,11 @@
 import React, {useEffect, useState } from "react";
-import Nasa from "./components/Nasa"
+import Nasa from "../components/Nasa"
 import axios from "axios";
 
 export default function NasaComponent () {
 
 
     const [things, setThings] = useState([])
-    console.log(things);
 
     useEffect( () => {
         axios.get("https://api.nasa.gov/planetary/apod?date=2020-07-28&api_key=JUeUMwskOxYmIzMB0ia5qheFd3nrwbTuqN1TBlLA")
@@ -19,7 +18,12 @@ export default function NasaComponent () {
 
     return (
         <div>
-            {things.map(thing => <Nasa key={thing.id} thing={thing} />)}
+            {console.log(Object.entries(things))}
+            {Object.entries(things).map( (thing, i) => { 
+                return (
+                <Nasa key={i} nasa={things} />
+                )
+            })}
         </div>
     )
 }
