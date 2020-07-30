@@ -11,6 +11,7 @@ const Nasa = props => {
             <img src={nasa.url}/>
             <p>{nasa.copyright}</p>
             <p>{nasa.explanation}</p>
+            <p>{nasa.benefits}</p>
         </div>
     )
 }
