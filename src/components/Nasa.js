@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react";
+import React from "react";
 
 const Nasa = props => {
 
@@ -8,10 +8,11 @@ const Nasa = props => {
         <div>
             <h1>{nasa.title}</h1>
             <p>{nasa.date}</p>
-            <img src={nasa.url}/>
+            <img src={nasa.url} alt=""/>
             <p>{nasa.copyright}</p>
             <p>{nasa.explanation}</p>
-            <p>{nasa.benefits}</p>
+            <h3>OMG! You made another axios get request in your useEffect? Awesome!</h3>
+            <p>{nasa.description}</p>
         </div>
     )
 }

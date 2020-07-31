@@ -1,5 +1,7 @@
 import React, {useEffect, useState } from "react";
-import Nasa from "../components/Nasa"
+import Nasa from "../components/Nasa";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from "reactstrap";
 import axios from "axios";
 
 export default function NasaComponent () {
@@ -27,8 +29,8 @@ export default function NasaComponent () {
     return (
         <div>
             {
-                things.map(thing => <Nasa 
-                    key={thing.id} nasa={thing}
+                things.map((thing, i) => <Nasa 
+                    key={i} nasa={thing}
                 />)
             }
         </div>
