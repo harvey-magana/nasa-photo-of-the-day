@@ -1,6 +1,5 @@
 import React, {useEffect, useState } from "react";
 import Nasa from "../components/Nasa";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "reactstrap";
 import axios from "axios";
 
