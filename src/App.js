@@ -1,12 +1,15 @@
 import React from "react";
 import NasaComponent from "./components/NasaComponent"
-import "./App.css";
+import { Container } from "reactstrap";
+import "./style.css";
 
 function App() {
   return (
-    <div className="App">
-      <NasaComponent />
-    </div>
+    <Container>
+      <div className="App">
+          <NasaComponent />
+      </div>
+    </Container>
   );
 }
 

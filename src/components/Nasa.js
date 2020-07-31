@@ -1,4 +1,5 @@
 import React from "react";
+import { Jumbotron } from "reactstrap";
 
 const Nasa = props => {
 
@@ -6,12 +7,13 @@ const Nasa = props => {
     console.log(nasa)
     return ( 
         <div>
-            <h1>{nasa.title}</h1>
-            <p>{nasa.date}</p>
+            <Jumbotron className="text-center">
+                <h1>{nasa.title}</h1>
+                <p>{nasa.date}</p>
+            </Jumbotron>
             <img src={nasa.url} alt=""/>
             <p>{nasa.copyright}</p>
             <p>{nasa.explanation}</p>
-            <h3>OMG! You made another axios get request in your useEffect? Awesome!</h3>
             <p>{nasa.description}</p>
         </div>
     )
